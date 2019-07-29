@@ -1,0 +1,14 @@
+{
+  "name": "ex_algorithms",
+  "version": "1.0.0",
+  "description": "List of exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "",
+  "license": "ISC"
+}
