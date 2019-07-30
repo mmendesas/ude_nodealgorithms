@@ -29,3 +29,34 @@ A list of some algorithms solved using nodejs
     > repl -> enter the debug repl (ctrl + c to exit)
     > str -> to see str value
     ```
+
+### Notes
+
+ - `common string questions`
+    - what is the most common character in a string?
+    - does string A have the same characters as string B (Is it an anagram)?
+    - does the given string have any repeated characters in it?
+- convert the `string` in a `object` representation
+    - `hello there!` -> 
+        ```json
+            {
+                "H": 1,
+                "e": 3,
+                "l": 2,
+                "o": 1,
+                " ": 1,
+                "T": 1,
+                "h": 1,
+                "r": 1,
+                "!": 1
+            }
+        ```
+    - transform in an object
+    ```js
+        const string = 'Hello There!';
+        const chars = {};
+        for(let char of string){
+            chars[char] = chars[char] + 1 || 1;
+        }
+    ```
+
