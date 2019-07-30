@@ -7,6 +7,46 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+    return str.split('').every((char, i) => {
+        return char === str[str.length - i - 1];
+    })
+}
+
+// -----------------------------------------------------
+// 1 solution using array reverse
+
+// function palindrome(str) {
+//     return str === str.split('').reverse().join('');
+// }
+
+
+// 2 solution with for, evaluating only half word
+
+// function palindrome(str) {
+//     const letters = str.split('');
+//     let isEqual = false;
+//     for (let i in letters) {
+//         // this evaluate only the half word (fast than other solutions)
+//         if (i <= (letters.length - i) - 1) {
+//             // return false if letter is different
+//             isEqual = letters[i] === letters[(letters.length - i) - 1];
+//             if (!isEqual) {
+//                 break;
+//             }
+//         }
+//     }
+//     return isEqual;
+// }
+
+
+// 3 solution with `every` array helper function
+
+// function palindrome(str) {
+//     return str.split('').every((char, i) => {
+//         return char === str[str.length - i - 1];
+//     })
+// }
+
 
 module.exports = palindrome;

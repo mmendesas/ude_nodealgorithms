@@ -31,3 +31,7 @@ test('"Fish hsif" is not a palindrome', () => {
 test('"pennep" a palindrome', () => {
   expect(palindrome('pennep')).toBeTruthy();
 });
+
+test('"abba" a palindrome', () => {
+  expect(palindrome('abba')).toBeTruthy();
+});
