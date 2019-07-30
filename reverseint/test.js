@@ -8,6 +8,14 @@ test('ReverseInt handles 0 as an input', () => {
   expect(reverseInt(0)).toEqual(0);
 });
 
+test('ReverseInt flips a positive hundred number', () => {
+  expect(reverseInt(400)).toEqual(4);
+});
+
+test('ReverseInt flips a negative hundred number', () => {
+  expect(reverseInt(-400)).toEqual(-4);
+});
+
 test('ReverseInt flips a positive number', () => {
   expect(reverseInt(5)).toEqual(5);
   expect(reverseInt(15)).toEqual(51);
