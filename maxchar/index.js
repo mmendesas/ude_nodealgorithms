@@ -12,11 +12,12 @@ function maxChar(str) {
 
     // mount the charMap
     for (let char of str) {
-        if (charMap[char]) {
-            charMap[char]++;
-        } else {
-            charMap[char] = 1;
-        }
+        charMap[char] = charMap[char] + 1 || 1;
+        // if (charMap[char]) {
+        //     charMap[char]++;
+        // } else {
+        //     charMap[char] = 1;
+        // }
     }
 
     // found the maxChar
