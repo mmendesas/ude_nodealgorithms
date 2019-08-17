@@ -8,6 +8,48 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// exponential time - how to improve speed (memoization)
+function memoize(fn) {
+    const cache = {};
+    return function (...args) {
+        if (cache[args]) {
+            return cache[args];
+        }
+        // calculate the result and store it
+        const result = fn.apply(this, args);
+        cache[args] = result;
+        return result;
+    }
+}
+
+function slowFib(n) {
+    if (n < 2) {
+        return n;
+    }
+    // call the memoized function
+    return fib(n - 1) + fib(n - 2);
+}
+
+const fib = memoize(slowFib);
+
+// 1 solution - iterative solution
+// function fib(n) {
+//     const result = [0, 1];
+//     for (let i = 2; i <= n; i++) {
+//         const a = result[i - 1];
+//         const b = result[i - 2];
+//         result.push(a + b);
+//     }
+//     return result[n];
+// }
+
+// 2 solution - using recursive (exponential time)
+// function fib(n) {
+//     if (n < 2) {
+//         return n;
+//     }
+//     return fib(n - 1) + fib(n - 2);
+// }
+
 
 module.exports = fib;
