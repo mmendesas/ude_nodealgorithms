@@ -20,3 +20,10 @@ Determines the performance of your code
 
  #### space complexity
   - related to how much more memory is required by doubling the problem set
+
+
+### Data Structures
+    Ways of organizing information with optimal 'runtime complexity' for adding or removing records
+
+#### Queues
+    - `FIFO`- First In First Out
