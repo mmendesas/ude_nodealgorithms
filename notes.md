@@ -56,3 +56,11 @@ Determines the performance of your code
 - node has reference to next
 - methods: getFirst, getLast, size ... -> (linkedlist/index.js)
 - remember `slow` and `fast`
+
+#### Trees
+
+- nodes with children[]
+- breadth-first traversal
+  - start item from left to right
+- depth-first traversal
+  - from very top to very bottom
