@@ -49,3 +49,10 @@ Determines the performance of your code
     - adds `1, 2, 3` -> results in `[1, 2, 3]`
     - peek -> get the top item -> result is `3`
     - remove -> results in `[1, 2]` and `3` is returned
+
+#### Linked Lists
+
+- ordered collection of data (chain)
+- node has reference to next
+- methods: getFirst, getLast, size ... -> (linkedlist/index.js)
+- remember `slow` and `fast`
