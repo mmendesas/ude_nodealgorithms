@@ -11,6 +11,22 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
-function fromLast(list, n) {}
+function fromLast(list, n) {
+  let slow = list.getFirst();
+  let fast = list.getFirst();
+
+  // calculate the distance (move fast up to n dist)
+  for (let i = 0; i < n; i++) {
+    fast = fast.next;
+  }
+
+  // move each one step until the last one
+  while (fast.next) {
+    slow = slow.next;
+    fast = fast.next;
+  }
+
+  return slow;
+}
 
 module.exports = fromLast;
