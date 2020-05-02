@@ -31,11 +31,21 @@ class Tree {
   }
 
   traverseBF(fn) {
-    let array = [this.root];
+    let arr = [this.root];
 
-    while (array.length) {
-      const node = array.shift(); // get left item
-      array.push(...node.children);
+    while (arr.length) {
+      const node = arr.shift(); // get left item
+      arr.push(...node.children);
+      fn(node);
+    }
+  }
+
+  traverseDF(fn) {
+    let arr = [this.root];
+
+    while (arr.length) {
+      const node = arr.shift(); // remove first item;
+      arr.unshift(...node.children); // add array to first
       fn(node);
     }
   }
