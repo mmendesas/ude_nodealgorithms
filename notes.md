@@ -60,7 +60,7 @@ Determines the performance of your code
 #### Trees
 
 - nodes with children[]
-- breadth-first traversal
+- breadth-first traversal (`each lane`)
   - start item from left to right
-- depth-first traversal
+- depth-first traversal (`top to bottom column`)
   - from very top to very bottom
